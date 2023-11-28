@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="shortcut icon" href="data/image/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="products.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="#">
+            <img class="logo" src="data/image/logo.png" alt="Logo"
+          /></a>
+        </div>
+        <div class="navbar__link">
+          <a href="#">Home</a>
+          <a href="products.html">Products</a>
+        </div>
+
+        <input type="checkbox" id="toggler" />
+        <label for="toggler"><i class="fa fa-bars"></i></label>
+
+        <div class="menu">
+          <div class="navbar__icon">
+            <a href="log_in.html"><i id="user-login" class="fa fa-user"></i></a>
+            <i id="cart" class="fa fa-shopping-bag"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="title-and-box-serach">
+        <h1>Tất cả sản phẩm</h1>
+        <div class="box-search">
+          <input type="text" id="search" placeholder="Search" />
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+      <section class="products-container"></section>
+    </main>
+    <footer></footer>
+    <script src="products.js"></script>
+  </body>
+</html>
