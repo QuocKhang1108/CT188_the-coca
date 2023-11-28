@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products</title>
+    <title>Log in</title>
     <link rel="shortcut icon" href="data/image/icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="sign_up.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="log_in.css" />
   </head>
   <body>
     <header>
@@ -39,20 +39,10 @@
     </header>
     <main>
       <form enctype="multipart/form-data" method="post">
-        <h1 class="title-h1">Sign up</h1>
+        <h1 class="title-h1">Log in</h1>
         <p class="description">
-          Please fill in this form to create an account.
+          Please enter your email address and password to log in.
         </p>
-        <div class="name">
-          <label>
-            <input type="text" required />
-            <span>First Name</span>
-          </label>
-          <label>
-            <input type="text" required />
-            <span>Last Name</span>
-          </label>
-        </div>
         <label>
           <input type="text" required />
           <span>Email</span>
@@ -64,16 +54,9 @@
             <i class="fa fa-eye-slash"></i>
           </span>
         </label>
-        <label>
-          <input type="text" id="passwordConfirm" required />
-          <span>Confirm Password</span>
-          <span class="icon" id="togglePasswordConfirm">
-            <i class="fa fa-eye-slash"></i>
-          </span>
-        </label>
         <button class="submit"><p class="submit-content">Submit</p></button>
         <p class="login">
-          Do you already have an account? <a href="log_in.html">Log in</a> here
+          Do not have an account? <a href="sign_up.html">Sign up</a> here
         </p>
       </form>
     </main>
