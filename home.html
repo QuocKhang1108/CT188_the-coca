@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./data/icon/css/all.min.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Products</title>
+        <link rel="shortcut icon" href="data/image/icon.png" type="image/x-icon" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
     <link rel="stylesheet" href="./home.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <title>Home</title>
 </head>
 <body>
     <header class="header">
-        <div class="header-nav__logo"><a href="./Trangchu.html"></a>ONEW</div>
-        <nav class="header-nav">
-            <a href="#">Trang Chủ</a>
-            <a href="#">Sản Phẩm</a>
-            <a href="#">Đăng Nhập</a>
+        <nav class="navbar">
+          <div class="navbar__logo">
+            <a href="#">
+              <img class="logo" src="data/image/logo.png" alt="Logo"
+            /></a>
+          </div>
+          <div class="navbar__link">
+            <a href="#">Home</a>
+            <a href="products.html">Products</a>
+          </div>
+  
+          <input type="checkbox" id="toggler" />
+          <label for="toggler"><i class="fa fa-bars"></i></label>
+  
+          <div class="menu">
+            <div class="navbar__icon">
+              <a href="log_in.html"><i id="user-login" class="fa fa-user"></i></a>
+              <i id="cart" class="fa fa-shopping-bag"></i>
+            </div>
+          </div>
         </nav>
-        <div class="header-nav__cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-        </div>
-        <div class="header-nav__bars">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-
-        <div class="dropdown_nav">
-            <a href="#">Trang Chủ</a>
-            <a href="#">Sản Phẩm</a>
-            <a href="#">Đăng Nhập</a>
-        </div>
-
-    </header>
+      </header>
     <main class="main-content">
         <article class="general-information">
             <div class="general-content">
@@ -93,16 +102,9 @@
 
     </main>
     <footer class="footer">
-        <div class="tool-box">
-            <div><i class="fa-solid fa-language"></i></div> 
-            <div><i class="fa-brands fa-facebook"></i></div>
-            <div> <i class="fa-brands fa-instagram"></i></div>
-        </div>
         <div>
             <p>@2023 truongb2111827@student.ctu.edu.vn</p>
         </div>
     </footer>
-
-    <script src="./home.js"></script>
 </body>
 </html>
