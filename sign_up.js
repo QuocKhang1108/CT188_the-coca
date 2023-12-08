@@ -1,3 +1,4 @@
+// An/hien password
 const togglePasswordVisibility = (inputElement, toggleElement) => {
   if (inputElement.type === "password") {
     inputElement.type = "text";
@@ -21,19 +22,19 @@ togglePasswordConfirm.addEventListener("click", () => {
   togglePasswordVisibility(passwordConfirm, togglePasswordConfirm);
 });
 
-// xu li dang nhap 
+// xu li dang nhap
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('form');
-  const firstNameInput = document.getElementById('firstname');
-  const lastNameInput = document.getElementById('lastname');
-  const emailInput = document.getElementById('email');
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form");
+  const firstNameInput = document.getElementById("firstname");
+  const lastNameInput = document.getElementById("lastname");
+  const emailInput = document.getElementById("email");
 
-
-  form.addEventListener('submit', function (event) {
-    event.preventDefault(); 
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
     if (validateForm()) {
+
       const email = emailInput.value;
       const password = passwordInput.value;
 
@@ -59,12 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
   passwordInput.addEventListener('blur', validatePassword);
   passwordConfirmInput.addEventListener('blur', validatePasswordConfirm);
 
-  
-  firstNameInput.addEventListener('focus', hideErrorMessage);
-  lastNameInput.addEventListener('focus', hideErrorMessage);
-  emailInput.addEventListener('focus', hideErrorMessage);
-  passwordInput.addEventListener('focus', hideErrorMessage);
-  passwordConfirmInput.addEventListener('focus', hideErrorMessage);
+  firstNameInput.addEventListener("focus", hideErrorMessage);
+  lastNameInput.addEventListener("focus", hideErrorMessage);
+  emailInput.addEventListener("focus", hideErrorMessage);
+  passwordInput.addEventListener("focus", hideErrorMessage);
+  passwordConfirmInput.addEventListener("focus", hideErrorMessage);
 
   function validateForm() {
     return (
@@ -100,16 +100,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function validateEmail() {
     const emailValue = emailInput.value.trim();
-    if (emailValue === '') {
-      return showError(emailInput, 'Email is required!');
+    if (emailValue === "") {
+      return showError(emailInput, "Email is required!");
     } else if (!isValidEmail(emailValue)) {
-      return showError(emailInput, 'Invalid email format!');
+      return showError(emailInput, "Invalid email format!");
     } else {
       return showSuccess(emailInput);
     }
   }
 
+  function isValidEmail(email) {
+    // Sử dụng biểu thức chính quy để kiểm tra định dạng email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+  
+
   function validatePassword() {
+
     const passwordValue = passwordInput.value.trim();
     // password: ít nhất 8 ký tự, chứa ít nhất một chữ cái và một chữ số
     const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
@@ -119,20 +127,24 @@ document.addEventListener('DOMContentLoaded', function () {
       'Password is required and should be at least 8 characters',
       passwordRegex.test(passwordValue)
     );
+
   }
+
+  
 
   function validatePasswordConfirm() {
     const passwordValue = passwordInput.value.trim();
     const passwordConfirmValue = passwordConfirmInput.value.trim();
 
-    if (passwordConfirmValue === '') {
-      return showError(passwordConfirmInput, 'Confirm Password is required!');
+    if (passwordConfirmValue === "") {
+      return showError(passwordConfirmInput, "Confirm Password is required!");
     } else if (passwordValue !== passwordConfirmValue) {
-      return showError(passwordConfirmInput, 'Passwords do not match!');
+      return showError(passwordConfirmInput, "Passwords do not match!");
     } else {
       return showSuccess(passwordConfirmInput);
     }
   }
+
 
   function validateInput(input, message, isValid) {
     const formControl = input.parentElement;
@@ -147,43 +159,41 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       formControl.classList.remove('error');
       formControl.classList.add('success');
-      errorElement.innerText = '';
+      errorElement.innerText = ''; // Xóa nội dung lỗi nếu giá trị hợp lệ
       return true;
     }
   }
+  
 
   function showError(input, message) {
     const formControl = input.parentElement;
-    formControl.classList.remove('success');
-    formControl.classList.add('error');
-    const errorElement = formControl.querySelector('span.error-message');
+    formControl.classList.remove("success");
+    formControl.classList.add("error");
+    const errorElement = formControl.querySelector("span.error-message");
     errorElement.innerText = message;
-    errorElement.style.color = 'white';
+    errorElement.style.color = "white";
     return false;
   }
 
   function showSuccess(input) {
     const formControl = input.parentElement;
-    formControl.classList.remove('error');
-    formControl.classList.add('success');
-    const errorElement = formControl.querySelector('span.error-message');
-    errorElement.innerText = '';
+    formControl.classList.remove("error");
+    formControl.classList.add("success");
+    const errorElement = formControl.querySelector("span.error-message");
+    errorElement.innerText = "";
     return true;
   }
 
-  function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
 
   function hideErrorMessage(event) {
     const input = event.target;
     const formControl = input.parentElement;
-    formControl.classList.remove('error');
-    formControl.classList.remove('success');
-    const errorElement = formControl.querySelector('span.error-message');
-    errorElement.innerText = '';
+    formControl.classList.remove("error");
+    formControl.classList.remove("success");
+    const errorElement = formControl.querySelector("span.error-message");
+    errorElement.innerText = "";
   }
+
 
   function isEmailUsed(email) {
     const storedUser = localStorage.getItem(email);
