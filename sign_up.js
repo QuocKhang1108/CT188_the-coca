@@ -34,17 +34,24 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault(); 
 
     if (validateForm()) {
-      saveCredentials({
-        email: emailInput.value,
-        password: passwordInput.value
-      });
+      const email = emailInput.value;
+      const password = passwordInput.value;
 
-      alert('Đăng kí thành công!');
-    }
-    else {
-      console.log('Form is not valid'); // In ra console để theo dõi
+      // Kiểm tra xem email đã được sử dụng chưa
+      if (!isEmailUsed(email)) {
+        // Nếu chưa, tạo một đối tượng người dùng và lưu vào localStorage
+        const user = { email, password };
+        saveUser(email, user);
+
+        // Hiển thị hộp thoại thông báo khi đăng kí thành công
+        alert('Đăng kí thành công!');
+      } else {
+        // Nếu email đã được sử dụng, hiển thị thông báo lỗi
+        alert('Địa chỉ email đã được sử dụng!');
+      }
     }
   });
+
 
   firstNameInput.addEventListener('blur', validateFirstName);
   lastNameInput.addEventListener('blur', validateLastName);
@@ -70,11 +77,25 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function validateFirstName() {
-    return validateInput(firstNameInput, 'First Name is required!');
+    const firstNameValue = firstNameInput.value.trim();
+    const firstNameRegex = /^[a-zA-Z]+$/;
+
+    return validateInput(
+      firstNameInput,
+      'First Name is required',
+      firstNameRegex.test(firstNameValue)
+    );
   }
 
   function validateLastName() {
-    return validateInput(lastNameInput, 'Last Name is required!');
+    const lastNameValue = lastNameInput.value.trim();
+    const lastNameRegex = /^[a-zA-Z]+$/; 
+
+    return validateInput(
+      lastNameInput,
+      'Last Name is required',
+      lastNameRegex.test(lastNameValue)
+    );
   }
 
   function validateEmail() {
@@ -89,7 +110,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function validatePassword() {
-    return validateInput(passwordInput, 'Password is required!');
+    const passwordValue = passwordInput.value.trim();
+    // password: ít nhất 8 ký tự, chứa ít nhất một chữ cái và một chữ số
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+    return validateInput(
+      passwordInput,
+      'Password is required and should be at least 8 characters',
+      passwordRegex.test(passwordValue)
+    );
   }
 
   function validatePasswordConfirm() {
@@ -105,12 +134,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function validateInput(input, message) {
-    const inputValue = input.value.trim();
-    if (inputValue === '') {
-      return showError(input, message);
+  function validateInput(input, message, isValid) {
+    const formControl = input.parentElement;
+    const errorElement = formControl.querySelector('span.error-message');
+  
+    if (!isValid) {
+      formControl.classList.remove('success');
+      formControl.classList.add('error');
+      errorElement.innerText = message;
+      errorElement.style.color = 'white';
+      return false;
     } else {
-      return showSuccess(input);
+      formControl.classList.remove('error');
+      formControl.classList.add('success');
+      errorElement.innerText = '';
+      return true;
     }
   }
 
@@ -147,9 +185,14 @@ document.addEventListener('DOMContentLoaded', function () {
     errorElement.innerText = '';
   }
 
-  function saveCredentials(credentials) {
-    const savedUsers = JSON.parse(localStorage.getItem('users')) || [];
-    savedUsers.push(credentials);
-    localStorage.setItem('users', JSON.stringify(savedUsers));
+  function isEmailUsed(email) {
+    const storedUser = localStorage.getItem(email);
+    return !!storedUser; 
   }
+
+  function saveUser(email, user) {
+    localStorage.setItem(email, JSON.stringify(user));
+  }
+  
+
 });
