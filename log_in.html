@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Log in</title>
+    <title>Login</title>
     <link rel="shortcut icon" href="data/image/icon.png" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -17,12 +17,12 @@
     <header>
       <nav class="navbar">
         <div class="navbar__logo">
-          <a href="#">
+          <a href="home.html">
             <img class="logo" src="data/image/logo.png" alt="Logo"
           /></a>
         </div>
         <div class="navbar__link">
-          <a href="#">Home</a>
+          <a href="home.html">Home</a>
           <a href="products.html">Products</a>
         </div>
 
@@ -38,13 +38,13 @@
       </nav>
     </header>
     <main>
-      <form enctype="multipart/form-data" method="post">
-        <h1 class="title-h1">Log in</h1>
+      <form onsubmit="login()">
+        <h1 class="title-h1">Login</h1>
         <p class="description">
-          Please enter your email address and password to log in.
+          Please enter your email address and password to login.
         </p>
         <label>
-          <input type="text" required />
+          <input id="email" type="text" required />
           <span>Email</span>
         </label>
         <label>
@@ -54,13 +54,13 @@
             <i class="fa fa-eye-slash"></i>
           </span>
         </label>
-        <button class="submit"><p class="submit-content">Submit</p></button>
+        <button class="submit"><p class="submit-content">Login</p></button>
         <p class="login">
           Do not have an account? <a href="sign_up.html">Sign up</a> here
         </p>
       </form>
     </main>
     <footer></footer>
-    <script src="sign_up.js"></script>
+    <script src="log_in.js"></script>
   </body>
 </html>
