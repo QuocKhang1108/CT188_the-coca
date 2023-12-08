@@ -1,110 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Products</title>
-        <link rel="shortcut icon" href="data/image/icon.png" type="image/x-icon" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-    <link rel="stylesheet" href="./home.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="shortcut icon" href="data/image/icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="reset.css" />
-    <title>Home</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./home.css" />
+    <!-- <title>Home</title> -->
+  </head>
+  <body>
     <header class="header">
-        <nav class="navbar">
-          <div class="navbar__logo">
-            <a href="#">
-              <img class="logo" src="data/image/logo.png" alt="Logo"
-            /></a>
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="home.html">
+            <img class="logo" src="data/image/logo.png" alt="Logo"
+          /></a>
+        </div>
+        <div class="navbar__link">
+          <a href="home.html">Home</a>
+          <a href="products.html">Products</a>
+        </div>
+
+        <input type="checkbox" id="toggler" />
+        <label for="toggler"><i class="fa fa-bars"></i></label>
+
+        <div class="menu">
+          <div class="navbar__icon">
+            <a href="log_in.html"><i id="user-login" class="fa fa-user"></i></a>
+            <i id="cart" class="fa fa-shopping-bag"></i>
           </div>
-          <div class="navbar__link">
-            <a href="#">Home</a>
-            <a href="products.html">Products</a>
-          </div>
-  
-          <input type="checkbox" id="toggler" />
-          <label for="toggler"><i class="fa fa-bars"></i></label>
-  
-          <div class="menu">
-            <div class="navbar__icon">
-              <a href="log_in.html"><i id="user-login" class="fa fa-user"></i></a>
-              <i id="cart" class="fa fa-shopping-bag"></i>
-            </div>
-          </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
     <main class="main-content">
-        <article class="general-information">
-            <div class="general-content">
-                <h1 class="general-content__title">Cảm nhận hương vị</h1>
-                <p>"Coca-Cola, biểu tượng hương vị độc đáo và niềm vui đậm đà, 
-                    đã thấm nhuần vào cuộc sống của mọi người trên toàn thế giới trong hơn một thế kỷ."</p>
-                <div class="box-infocompany">
-                    <a href="https://www.coca-colacompany.com/about-us/history">Thông tin công ty Coca-Cola</a>
-                </div>
-            </div>
-        </article>
+      <article class="general-information">
+        <div class="general-content">
+          <h1 class="general-content__title">Cảm nhận hương vị</h1>
+          <p>
+            "Coca-Cola, biểu tượng hương vị độc đáo và niềm vui đậm đà, đã thấm
+            nhuần vào cuộc sống của mọi người trên toàn thế giới trong hơn một
+            thế kỷ."
+          </p>
+          <div class="box-infocompany">
+            <a href="https://www.coca-colacompany.com/about-us/history"
+              >Thông tin công ty Coca-Cola</a
+            >
+          </div>
+        </div>
+      </article>
 
-        <div class="content-tittledv"><h3>Dịch vụ cải tiến</h3></div>
-        <article class="service">
-            <div class="card">
-                <img src="./data/image/img-newy3000.png" alt="new Items">
-                <div class="card__content">
-                <h4>Hương vị mới mẻ và ngon tuyệt</h4>
-                <p>Coca-Cola luôn tích cực tìm hiểu và cho ra những sản phẩm mới nhất, tốt nhất phục vụ người tiêu dùng</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./data/image/img-nhuataiche.png" alt="Nhua tai che">
-                <div class="card__content">
-                <h4>Vì một môi trường trong lành hơn</h4>
-                <p>Coca-Cola góp phần giải quyết các vấn đề bao bì thông qua cải tiến và sử dụng chất liệu tái chế nhằm giảm rác thải nhựa</p>
-                </div>
-            </div>
-        </article>
+      <div class="content-tittledv"><h3>Dịch vụ cải tiến</h3></div>
+      <article class="service">
+        <div class="card">
+          <img src="./data/image/img-newy3000.png" alt="new Items" />
+          <div class="card__content">
+            <h4>Hương vị mới mẻ và ngon tuyệt</h4>
+            <p>
+              Coca-Cola luôn tích cực tìm hiểu và cho ra những sản phẩm mới
+              nhất, tốt nhất phục vụ người tiêu dùng
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./data/image/img-nhuataiche.png" alt="Nhua tai che" />
+          <div class="card__content">
+            <h4>Vì một môi trường trong lành hơn</h4>
+            <p>
+              Coca-Cola góp phần giải quyết các vấn đề bao bì thông qua cải tiến
+              và sử dụng chất liệu tái chế nhằm giảm rác thải nhựa
+            </p>
+          </div>
+        </div>
+      </article>
 
-        <div class="content-tittlehd"><h3>Hoạt động</h3></div>
-        <article class="activities">
-            <div class="card"> 
-                <h4>Chung sức vì một xã hội bền vững</h4>
-                <p>Góp phần tạo nên sự thay đổi trong cuộc sống của mỗi người, cộng đồng và cả hành tinh này</p>
-            </div>
-            <div class="card">
-                   <img src="./data/image/img-hdhotro.jpg" alt="card full">
-            </div>
-        </article>
+      <div class="content-tittlehd"><h3>Hoạt động</h3></div>
+      <article class="activities">
+        <div class="card">
+          <h4>Chung sức vì một xã hội bền vững</h4>
+          <p>
+            Góp phần tạo nên sự thay đổi trong cuộc sống của mỗi người, cộng
+            đồng và cả hành tinh này
+          </p>
+        </div>
+        <div class="card">
+          <img src="./data/image/img-hdhotro.jpg" alt="card full" />
+        </div>
+      </article>
 
-        <div class="content-tittleth"><h3>Hành Trình Dài</h3></div>
+      <div class="content-tittleth"><h3>Hành Trình Dài</h3></div>
 
-        <article class="trademark">
-            <div class="trademark__card">
-                <div class="card">
-                    <img src="./data/image/100years.webp" alt="100 years">
-                </div>
-                <div class="card">
-                    <p>Sự thay đổi của kiểu dáng chai qua các năm</p>
-                </div>
-            </div>
-            <div class="trademark__card">
-                <div class="card">
-                    <img src="./data/image/hanhtrinh2.jpg" alt="">
-                </div>
-                <div class="card">
-                    <p>Sự thay đổi của logo Coca-cola qua các năm</p>
-                </div>
-            </div>
-        </article>
-
+      <article class="trademark">
+        <div class="trademark__card">
+          <div class="card">
+            <img src="./data/image/100years.webp" alt="100 years" />
+          </div>
+          <div class="card">
+            <p>Sự thay đổi của kiểu dáng chai qua các năm</p>
+          </div>
+        </div>
+        <div class="trademark__card">
+          <div class="card">
+            <img src="./data/image/hanhtrinh2.jpg" alt="" />
+          </div>
+          <div class="card">
+            <p>Sự thay đổi của logo Coca-cola qua các năm</p>
+          </div>
+        </div>
+      </article>
     </main>
     <footer class="footer">
-        <div>
-            <p>@2023 truongb2111827@student.ctu.edu.vn</p>
-        </div>
+      <div>
+        <p>@2023 truongb2111827@student.ctu.edu.vn</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

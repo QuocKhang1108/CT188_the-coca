@@ -1,3 +1,4 @@
+// An/hien password
 const togglePasswordVisibility = (inputElement, toggleElement) => {
   if (inputElement.type === "password") {
     inputElement.type = "text";
@@ -21,43 +22,40 @@ togglePasswordConfirm.addEventListener("click", () => {
   togglePasswordVisibility(passwordConfirm, togglePasswordConfirm);
 });
 
-// xu li dang nhap 
+// xu li dang nhap
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('form');
-  const firstNameInput = document.getElementById('firstname');
-  const lastNameInput = document.getElementById('lastname');
-  const emailInput = document.getElementById('email');
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form");
+  const firstNameInput = document.getElementById("firstname");
+  const lastNameInput = document.getElementById("lastname");
+  const emailInput = document.getElementById("email");
 
-
-  form.addEventListener('submit', function (event) {
-    event.preventDefault(); 
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
     if (validateForm()) {
       saveCredentials({
         email: emailInput.value,
-        password: passwordInput.value
+        password: passwordInput.value,
       });
 
-      alert('Đăng kí thành công!');
-    }
-    else {
-      console.log('Form is not valid'); // In ra console để theo dõi
+      alert("Đăng kí thành công!");
+    } else {
+      console.log("Form is not valid"); // In ra console để theo dõi
     }
   });
 
-  firstNameInput.addEventListener('blur', validateFirstName);
-  lastNameInput.addEventListener('blur', validateLastName);
-  emailInput.addEventListener('blur', validateEmail);
-  passwordInput.addEventListener('blur', validatePassword);
-  passwordConfirmInput.addEventListener('blur', validatePasswordConfirm);
+  firstNameInput.addEventListener("blur", validateFirstName);
+  lastNameInput.addEventListener("blur", validateLastName);
+  emailInput.addEventListener("blur", validateEmail);
+  passwordInput.addEventListener("blur", validatePassword);
+  passwordConfirmInput.addEventListener("blur", validatePasswordConfirm);
 
-  
-  firstNameInput.addEventListener('focus', hideErrorMessage);
-  lastNameInput.addEventListener('focus', hideErrorMessage);
-  emailInput.addEventListener('focus', hideErrorMessage);
-  passwordInput.addEventListener('focus', hideErrorMessage);
-  passwordConfirmInput.addEventListener('focus', hideErrorMessage);
+  firstNameInput.addEventListener("focus", hideErrorMessage);
+  lastNameInput.addEventListener("focus", hideErrorMessage);
+  emailInput.addEventListener("focus", hideErrorMessage);
+  passwordInput.addEventListener("focus", hideErrorMessage);
+  passwordConfirmInput.addEventListener("focus", hideErrorMessage);
 
   function validateForm() {
     return (
@@ -70,36 +68,36 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function validateFirstName() {
-    return validateInput(firstNameInput, 'First Name is required!');
+    return validateInput(firstNameInput, "First Name is required!");
   }
 
   function validateLastName() {
-    return validateInput(lastNameInput, 'Last Name is required!');
+    return validateInput(lastNameInput, "Last Name is required!");
   }
 
   function validateEmail() {
     const emailValue = emailInput.value.trim();
-    if (emailValue === '') {
-      return showError(emailInput, 'Email is required!');
+    if (emailValue === "") {
+      return showError(emailInput, "Email is required!");
     } else if (!isValidEmail(emailValue)) {
-      return showError(emailInput, 'Invalid email format!');
+      return showError(emailInput, "Invalid email format!");
     } else {
       return showSuccess(emailInput);
     }
   }
 
   function validatePassword() {
-    return validateInput(passwordInput, 'Password is required!');
+    return validateInput(passwordInput, "Password is required!");
   }
 
   function validatePasswordConfirm() {
     const passwordValue = passwordInput.value.trim();
     const passwordConfirmValue = passwordConfirmInput.value.trim();
 
-    if (passwordConfirmValue === '') {
-      return showError(passwordConfirmInput, 'Confirm Password is required!');
+    if (passwordConfirmValue === "") {
+      return showError(passwordConfirmInput, "Confirm Password is required!");
     } else if (passwordValue !== passwordConfirmValue) {
-      return showError(passwordConfirmInput, 'Passwords do not match!');
+      return showError(passwordConfirmInput, "Passwords do not match!");
     } else {
       return showSuccess(passwordConfirmInput);
     }
@@ -107,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function validateInput(input, message) {
     const inputValue = input.value.trim();
-    if (inputValue === '') {
+    if (inputValue === "") {
       return showError(input, message);
     } else {
       return showSuccess(input);
@@ -116,20 +114,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function showError(input, message) {
     const formControl = input.parentElement;
-    formControl.classList.remove('success');
-    formControl.classList.add('error');
-    const errorElement = formControl.querySelector('span.error-message');
+    formControl.classList.remove("success");
+    formControl.classList.add("error");
+    const errorElement = formControl.querySelector("span.error-message");
     errorElement.innerText = message;
-    errorElement.style.color = 'white';
+    errorElement.style.color = "white";
     return false;
   }
 
   function showSuccess(input) {
     const formControl = input.parentElement;
-    formControl.classList.remove('error');
-    formControl.classList.add('success');
-    const errorElement = formControl.querySelector('span.error-message');
-    errorElement.innerText = '';
+    formControl.classList.remove("error");
+    formControl.classList.add("success");
+    const errorElement = formControl.querySelector("span.error-message");
+    errorElement.innerText = "";
     return true;
   }
 
@@ -141,15 +139,15 @@ document.addEventListener('DOMContentLoaded', function () {
   function hideErrorMessage(event) {
     const input = event.target;
     const formControl = input.parentElement;
-    formControl.classList.remove('error');
-    formControl.classList.remove('success');
-    const errorElement = formControl.querySelector('span.error-message');
-    errorElement.innerText = '';
+    formControl.classList.remove("error");
+    formControl.classList.remove("success");
+    const errorElement = formControl.querySelector("span.error-message");
+    errorElement.innerText = "";
   }
 
   function saveCredentials(credentials) {
-    const savedUsers = JSON.parse(localStorage.getItem('users')) || [];
+    const savedUsers = JSON.parse(localStorage.getItem("users")) || [];
     savedUsers.push(credentials);
-    localStorage.setItem('users', JSON.stringify(savedUsers));
+    localStorage.setItem("users", JSON.stringify(savedUsers));
   }
 });
