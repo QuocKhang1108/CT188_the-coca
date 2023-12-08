@@ -171,3 +171,43 @@ p {
   font-size: 15px;
   line-height: 1.6;
 } */
+
+/*---footer---*/
+.footer_items{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  background-color: #4c4c4c;
+}
+.footer_items p,.footer_items h2{
+  text-align:left;
+  padding: 1px 0;
+  
+}
+.footer_items p{
+  color: white;
+  font-size: 20px;
+}
+.footer_items h2{
+  color: chocolate;
+  font-size: 30px;
+}
+#copyright{
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  background-color: #4c4c4c;
+}
+.icons{
+  margin-top: 5px;
+}
+#icons_items{
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+}
+section{
+  border-bottom: 2px inset white;
+}
