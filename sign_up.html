@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="shortcut icon" href="data/image/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="sign_up.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="home.html">
+            <img class="logo" src="data/image/logo.png" alt="Logo"
+          /></a>
+        </div>
+        <div class="navbar__link">
+          <a href="home.html">Home</a>
+          <a href="products.html">Products</a>
+        </div>
 
+        <input type="checkbox" id="toggler" />
+        <label for="toggler"><i class="fa fa-bars"></i></label>
+
+        <div class="menu">
+          <div class="navbar__icon">
+            <a href="log_in.html"><i id="user-login" class="fa fa-user"></i></a>
+            <i id="cart" class="fa fa-shopping-bag"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <form id="form" enctype="multipart/form-data" method="post">
+        <h1 class="title-h1">Sign up</h1>
+        <p class="description">
+          Please fill in this form to create an account.
+        </p>
+        <div class="name">
+          <label>
+            <input id="firstname" type="text" required />
+            <span>First Name</span>
+            <span class="error-message"></span>
+          </label>
+          <label>
+            <input id="lastname" type="text" required />
+            <span>Last Name</span>
+            <span class="error-message"></span>
+          </label>
+        </div>
+        <label>
+          <input id="email" type="text" required />
+          <span>Email</span>
+          <span class="error-message"></span>
+        </label>
+        <label>
+          <input type="password" id="password" required />
+          <span>Password</span>
+          <span class="icon" id="togglePassword">
+            <i class="fa fa-eye-slash"></i>
+          </span>
+          <span class="error-message"></span>
+        </label>
+        <label>
+          <input type="password" id="passwordConfirm" required />
+          <span>Confirm Password</span>
+          <span class="icon" id="togglePasswordConfirm">
+            <i class="fa fa-eye-slash"></i>
+          </span>
+          <span class="error-message"></span>
+        </label>
+        <button class="submit"><p class="submit-content">Submit</p></button>
+        <p class="login">
+          Do you already have an account? <a href="log_in.html">Log in</a> here
+        </p>
+      </form>
+    </main>
+    <footer></footer>
+    <script src="sign_up.js"></script>
+  </body>
+</html>

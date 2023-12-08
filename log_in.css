@@ -2,7 +2,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 main * {
@@ -13,7 +13,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 550px;
+  width: 550px;
   background: var(--dark-background-color);
   box-shadow: 0 0 20px var(--dark-background-color);
   padding: 20px;
@@ -127,34 +127,3 @@ input:valid + span {
   background: var(--secondary-color);
   transition: 0.5s;
 }
-
-/*     */
-
-.error label {
-  color: red; 
-}
-
-.error input {
-  border: 2px solid red; 
-}
-
-.error .error-message {
-  display: block; 
-}
-
-
-.success label {
-  color: green;
-}
-
-.success input {
-  border: 2px solid green;
-}
-
-.success .error-message {
-  display: none; 
-}
-
-
-
-
