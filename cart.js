@@ -145,3 +145,21 @@ cartshow.addEventListener("click", function () {
 cartbtn.addEventListener("click", function () {
   document.querySelector(".cart").style.right = "-100%";
 });
+
+const clearbtn  =  document.getElementById("clear-button")
+console.log(clearbtn)
+
+clearbtn.onclick = function () {
+  clearCartAndLocalStorage() 
+  alert("Thank you for your order")
+}
+function clearCartAndLocalStorage() {
+  // Xóa tất cả các sản phẩm trong giỏ hàng
+  var cartItems = document.querySelectorAll("tbody tr");
+  cartItems.forEach(function(item) {
+    item.remove();
+  });
+
+  // Xóa dữ liệu trong localStorage
+  localStorage.removeItem('cart');
+}
