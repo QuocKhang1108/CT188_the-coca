@@ -19,7 +19,8 @@ const products = [
     name: "Aquarius zero",
     image: "data/image/aquarius-zero.png",
     alt: "Aquarius zero",
-    description: "Mo ta",
+    description:
+      "Chai Nước Uống Thể Thao Aquarius chai 390ml là nước bù khoáng cho thể thao mang hương vị êm dịu giúp giải tan cơn khát của bạn. chai nước uống vận động Aquarius 390ml chính hãng nước bù khoáng Aquarius với thành phần gồm muối, Kali và chất Guarana có chức năng trì hoãn cảm giác mệt mỏi, giúp duy trì cơ thể hoạt động ở mức ổn định.",
     //
     flavors: [
       {
@@ -40,7 +41,8 @@ const products = [
     name: "CocaCola lon",
     image: "data/image/coca_nguyen_ban.png",
     alt: "CocaCola",
-    description: "Mo ta",
+    description:
+      "Lon Nước Giải Khát Coca-Cola vị Nguyên Bản Original Lon 320ml là loại nước ngọt được nhiều người yêu thích với hương vị thơm ngon, sảng khoái. lon nước ngọt Coca Cola 320ml chính hãng nước ngọt Coca Cola với lượng gas lớn sẽ giúp bạn xua tan mọi cảm giác mệt mỏi, căng thẳng, đem lại cảm giác thoải mái sau khi hoạt động ngoài trời.",
     //
     flavors: [
       {
@@ -64,7 +66,8 @@ const products = [
   {
     name: "CocaCola chai",
     image: "data/image/coca-300ml-chai-nhua.png",
-    description: "Mo ta",
+    description:
+      "Chai Nước Giải Khát Coca-Cola vị Nguyên Bản Original Lon 320ml là loại nước ngọt được nhiều người yêu thích với hương vị thơm ngon, sảng khoái. Chai nước ngọt Coca Cola 320ml chính hãng nước ngọt Coca Cola với lượng gas lớn sẽ giúp bạn xua tan mọi cảm giác mệt mỏi, căng thẳng, đem lại cảm giác thoải mái sau khi hoạt động ngoài trời.",
     //
     flavors: [
       {
@@ -88,7 +91,8 @@ const products = [
   {
     name: "Fanta cam chai",
     image: "data/image/fanta_cam_390ml.png",
-    description: "Mo ta",
+    description:
+      "Chai Nước Giải Khát Có Gas Fanta Cam Lon 320ml là sản phẩm nước ngọt có gas của thương hiệu nước ngọt Fanta nổi tiếng giúp giải khát sau khi hoạt động ngoài trời, giải tỏa căng thẳng, mệt mỏi khi học tập, làm việc. ",
     //
     flavors: [
       {
@@ -109,7 +113,8 @@ const products = [
   {
     name: "Fanta Sarsi RCG lon",
     image: "data/image/Fanta_Sarsi_RCG_320ml.png",
-    description: "Mo ta",
+    description:
+      "Lon Nước Giải Khát Fanta sarsi RCG Lon 320ml là loại nước ngọt được nhiều người yêu thích với hương vị thơm ngon, sảng khoái. lon Fanta sarsi RCG 320ml chính hãng nước ngọt Coca Cola với lượng gas lớn sẽ giúp bạn xua tan mọi cảm giác mệt mỏi, căng thẳng, đem lại cảm giác thoải mái sau khi hoạt động ngoài trời.",
     flavors: [
       {
         name: "Vị nguyên bản",
@@ -127,7 +132,8 @@ const products = [
   {
     name: "Fanta Strawberry",
     image: "data/image/fanta_Strawberry.png",
-    description: "Mo ta",
+    description:
+      "Lon Nước Giải Khát Fanta Stawberry Lon 320ml là loại nước ngọt được nhiều người yêu thích với hương vị thơm ngon, sảng khoái. lon Fanta Stawberry 320ml chính hãng nước ngọt Coca Cola với lượng gas lớn sẽ giúp bạn xua tan mọi cảm giác mệt mỏi, căng thẳng, đem lại cảm giác thoải mái sau khi hoạt động ngoài trời.",
     flavors: [
       {
         name: "Vị nguyên bản",
@@ -145,7 +151,8 @@ const products = [
   {
     name: "Fanta cam lon",
     image: "data/image/Fanta-cam-lon-330ml-1.png",
-    description: "Mo ta",
+    description:
+      "Lon Nước Giải Khát Fanta camLon 320ml là loại nước ngọt được nhiều người yêu thích với hương vị thơm ngon, sảng khoái. lon Fanta cam 320ml chính hãng nước ngọt Coca Cola với lượng gas lớn sẽ giúp bạn xua tan mọi cảm giác mệt mỏi, căng thẳng, đem lại cảm giác thoải mái sau khi hoạt động ngoài trời.",
     flavors: [
       {
         name: "Vị nguyên bản",
@@ -163,7 +170,8 @@ const products = [
   {
     name: "Fanta soda kem lon",
     image: "data/image/fanta-soda-kem-lon-320ml.png",
-    description: "Mo ta",
+    description:
+      "Lon Nước Giải Khát Fanta soda kem Lon 320ml là loại nước ngọt được nhiều người yêu thích với hương vị thơm ngon, sảng khoái. lon Fanta soda kem 320ml chính hãng nước ngọt Coca Cola với lượng gas lớn sẽ giúp bạn xua tan mọi cảm giác mệt mỏi, căng thẳng, đem lại cảm giác thoải mái sau khi hoạt động ngoài trời.",
     flavors: [
       {
         name: "Vị nguyên bản",
@@ -181,7 +189,8 @@ const products = [
   {
     name: "Fuze tea",
     image: "data/image/fuze_tea.png",
-    description: "Mo ta",
+    description:
+      "Chai trà chanh dây và hạt chia Fuzetea+ 450ml/ chai) là kết hợp giữa những lá trà xanh, hạt chia cùng vị chanh dây thơm ngọt. Nước trà giúp tăng cường năng lượng, vitamin cùng các dưỡng chất cần thiết khác cho cơ thể. Trà Fuze Tea không chứa chất béo, giúp cơ thể bù đắp nước, bổ sung năng lượng và vitamin.",
     flavors: [
       {
         name: "Vị nguyên bản",
@@ -199,7 +208,8 @@ const products = [
   {
     name: "Fuze tea Glace",
     image: "data/image/fuze_tea_Glace.png",
-    description: "Mo ta",
+    description:
+      "Chai trà đào và hạt chia Fuzetea+ 450ml/ chai) là kết hợp giữa những lá trà xanh, hạt chia cùng vị đào thơm ngọt. Nước trà giúp tăng cường năng lượng, vitamin cùng các dưỡng chất cần thiết khác cho cơ thể. Trà Fuze Tea không chứa chất béo, giúp cơ thể bù đắp nước, bổ sung năng lượng và vitamin.",
     flavors: [
       {
         name: "Vị nguyên bản",
@@ -217,7 +227,8 @@ const products = [
   {
     name: "Fuze tea Chanh",
     image: "data/image/fuze_tra_Chanh.png",
-    description: "Mo ta",
+    description:
+      "Chai trà chanh và sả Fuzetea+ 450ml/ chai) là kết hợp giữa những lá trà xanh, sả cùng vị chanh thơm ngọt. Nước trà giúp tăng cường năng lượng, vitamin cùng các dưỡng chất cần thiết khác cho cơ thể. Trà Fuze Tea không chứa chất béo, giúp cơ thể bù đắp nước, bổ sung năng lượng và vitamin.",
     flavors: [
       {
         name: "Vị nguyên bản",
@@ -235,7 +246,8 @@ const products = [
   {
     name: "CocaCola plus",
     image: "data/image/nuoc_ngot_coca_plus_330_ml.png",
-    description: "Mo ta",
+    description:
+      "Lon Nước Giải Khát Coca-Cola Plus Lon 320ml là loại nước ngọt được nhiều người yêu thích với hương vị thơm ngon, sảng khoái. lon nước ngọt Coca Cola Plus 320ml chính hãng nước ngọt Coca Cola với lượng gas lớn sẽ giúp bạn xua tan mọi cảm giác mệt mỏi, căng thẳng, đem lại cảm giác thoải mái sau khi hoạt động ngoài trời.",
     flavors: [
       {
         name: "Không đường",
@@ -251,9 +263,10 @@ const products = [
     price: "12.000",
   },
   {
-    name: "Dasani",
+    name: "Nước suối Dasani",
     image: "data/image/nuoc-dasani-500ml.png",
-    description: "Mo ta",
+    description:
+      "Chai Nước suối Dasani 24x510ml từ nguồn nước ngầm thông qua hệ thống thẩm thấu ngược và thanh trùng bằng Ozone, đảm bảo sự thanh khiết trong từng giọt nước giúp thanh lọc cơ thể hoàn hảo của nước Dasani. Lốc 24 chai Nước suối Dasani 24x510ml khi uống có vị tinh khiết, thanh mát giúp cơ thể bù nước",
     flavors: [
       {
         name: "Vị nguyên bản",
@@ -271,7 +284,8 @@ const products = [
   {
     name: "Nutriboost",
     image: "data/image/nutriboost_banh_quy_kem.png",
-    description: "Mo ta",
+    description:
+      "Chai Thức Uống Sữa Trái Cây Nutriboost Hương Bánh Quy Kem (297ml/Chai) là hỗn hợp sữa thông minh kết hợp giữa sữa và các nguyên liệu.",
     flavors: [
       {
         name: "Bánh quy kem",
@@ -293,7 +307,8 @@ const products = [
   {
     name: "Sprite lon",
     image: "data/image/sprite_330_ml.png",
-    description: "Mo ta",
+    description:
+      "Lon Nước Giải Khát Có Gas Sprite Lon 320ml là sản phẩm nước ngọt thơm ngon hấp dẫn được yêu chuộng trên thế giới đến từ thương hiệu nước ngọt Sprite. lon nước ngọt Sprite hương chanh 320ml dạng thùng tiện lợi, tiết kiệm, sử dụng lâu cho nhiều người như gia đình, hàng quán hay những bữa tiệc, tụ tập bạn bè",
     flavors: [
       {
         name: "Vị nguyên bản",
@@ -311,7 +326,8 @@ const products = [
   {
     name: "Sprite chai",
     image: "data/image/sprite-huong-chanh-chai-390ml.png",
-    description: "Mo ta",
+    description:
+      "Chai Nước Giải Khát Sprite Có Gas là sản phẩm nước ngọt thơm ngon hấp dẫn được yêu chuộng trên thế giới đến từ thương hiệu nước ngọt Sprite. Chai nước ngọt Sprite hương chanh 320ml dạng thùng tiện lợi, tiết kiệm, sử dụng lâu cho nhiều người như gia đình, hàng quán hay những bữa tiệc, tụ tập bạn bè",
     flavors: [
       {
         name: "Hương chanh",
