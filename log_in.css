@@ -9,7 +9,7 @@ main * {
   box-sizing: border-box;
 }
 
-form {
+#form {
   display: flex;
   flex-direction: column;
   gap: 20px;
