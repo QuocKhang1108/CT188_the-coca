@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signup</title>
+    <title>Login</title>
     <link rel="shortcut icon" href="data/image/icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="sign_up.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="log_in.css" />
   </head>
   <body>
     <header>
@@ -40,27 +40,14 @@
       </nav>
     </header>
     <main>
-      <form id="form" enctype="multipart/form-data" method="post">
-        <h1 class="title-h1">Sign up</h1>
+      <form id="form" onsubmit="login()">
+        <h1 class="title-h1">Login</h1>
         <p class="description">
-          Please fill in this form to create an account.
+          Please enter your email address and password to login.
         </p>
-        <div class="name">
-          <label>
-            <input id="firstname" type="text" required />
-            <span>First Name</span>
-            <span class="error-message"></span>
-          </label>
-          <label>
-            <input id="lastname" type="text" required />
-            <span>Last Name</span>
-            <span class="error-message"></span>
-          </label>
-        </div>
         <label>
           <input id="email" type="text" required />
           <span>Email</span>
-          <span class="error-message"></span>
         </label>
         <label>
           <input type="password" id="password" required />
@@ -68,19 +55,10 @@
           <span class="icon" id="togglePassword">
             <i class="fa fa-eye-slash"></i>
           </span>
-          <span class="error-message"></span>
         </label>
-        <label>
-          <input type="password" id="passwordConfirm" required />
-          <span>Confirm Password</span>
-          <span class="icon" id="togglePasswordConfirm">
-            <i class="fa fa-eye-slash"></i>
-          </span>
-          <span class="error-message"></span>
-        </label>
-        <button class="submit"><p class="submit-content">Submit</p></button>
+        <button class="submit"><p class="submit-content">Login</p></button>
         <p class="login">
-          Do you already have an account? <a href="log_in.html">Log in</a> here
+          Do not have an account? <a href="sign_up.html">Sign up</a> here
         </p>
       </form>
       <section class="cart">
@@ -155,7 +133,7 @@
       </section>
       <div id="copyright">CT18805_01_HK1_2023-2024</div>
     </footer>
-    <script src="sign_up.js"></script>
+    <script src="log_in.js"></script>
     <script src="cart.js"></script>
   </body>
 </html>

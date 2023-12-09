@@ -1,0 +1,273 @@
+/* *:hover {
+  border: solid 1px var(--secondary-color);
+} */
+
+* {
+  font-family: cursive, monospace;
+  /* border: solid 1px var(--secondary-color); */
+}
+
+:root {
+  --primary-color: #66ccff;
+  --secondary-color: #0099cc;
+  --third-color: #05ba6e;
+  --white-color: #ffffff;
+  --background-color: #d1d1d1;
+  --shadow-color: rgba(108, 108, 108, 0.529);
+  --dark-background-color: #2e4252;
+}
+
+body {
+  display: grid;
+  top: 0;
+  /* background: var(--background-color); */
+  margin: 0 auto;
+  border: 1px;
+  width: 100%;
+  min-width: 550px;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* background-size: cover; */
+  /* background-position: center; */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 5px 10px 0 var(--shadow-color);
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+  font-size: 30px;
+  padding: 0 20px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+
+  & * {
+    height: 80px;
+  }
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
+.navbar__link {
+  font-size: 3rem;
+}
+
+.navbar__link,
+.navbar__icon,
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__link a {
+  text-decoration: none;
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  padding: 0 30px;
+  margin: 0;
+  transition: 0.2s;
+}
+
+.navbar__link a::after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid var(--secondary-color);
+  transform: scaleX(0);
+  transition: transform ease-in-out 250ms;
+}
+
+.navbar__link a:hover::after {
+  transform: scaleX(1);
+}
+
+#toggler,
+.navbar label {
+  display: none;
+}
+
+.navbar__icon i {
+  padding: 0 10px;
+  margin: 0;
+  color: black;
+}
+
+.navbar__icon i:hover {
+  color: var(--secondary-color);
+}
+
+main {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.footer_items {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  background-color: #4c4c4c;
+}
+
+.footer_items p,
+.footer_items h2 {
+  text-align: left;
+  padding: 1px 0;
+}
+
+.footer_items p {
+  color: white;
+  font-size: 20px;
+}
+
+.footer_items h2 {
+  color: chocolate;
+  font-size: 30px;
+}
+
+#copyright {
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  background-color: #4c4c4c;
+}
+
+.footer_items .icons {
+  margin-top: 5px;
+}
+
+.footer_items #icons_items {
+  padding: 5px;
+  font-size: 30px;
+  /* background-color: white; */
+  /* border-radius: 10%; */
+  /* color: black; */
+}
+
+.footer_items section {
+  border-bottom: 2px inset white;
+}
+
+/* reponsive footer */
+
+/* CSS cho màn hình có kích thước nhỏ hơn hoặc bằng 768px */
+@media (max-width: 1024px) {
+  .footer_items {
+    flex-direction: column;
+    text-align: center;
+
+    & h2,
+    p {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .footer_items div {
+    margin-bottom: 20px;
+  }
+}
+
+/* CSS cho màn hình có kích thước lớn hơn hoặc bằng 1024px */
+@media (min-width: 1025px) {
+  .footer_items {
+    padding: 10px;
+  }
+}
+
+/*------cart--------  */
+.cart {
+  width: 50%;
+  margin-top: auto;
+  text-align: center;
+  padding-top: 30px;
+  z-index: 10;
+}
+.cart h2 {
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+
+.cart table {
+  width: 100%;
+}
+
+.cart table thead tr th:first-child {
+  text-align: left;
+}
+.cart table tr td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.cart table thead tr th:last-child {
+  text-align: right;
+}
+.cart table tbody tr td:last-child {
+  text-align: right;
+}
+
+/* ------------*/
+.cart button {
+  position: relative;
+  overflow: hidden;
+  margin-top: 12px;
+  height: 30px;
+  padding: 0 20px;
+  border-radius: 30px;
+  background-size: 400%;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: tan;
+  font-weight: bold;
+  color: #fff;
+}
+.cart {
+  position: fixed;
+  height: 100vh;
+  width: 500px;
+  right: -100%;
+  top: 0;
+  background-color: rgb(36, 36, 37);
+  color: #fff;
+  padding: 12px 20px;
+  overflow-y: scroll;
+  transition: all 0.3s ease;
+}
+.cart i {
+  cursor: pointer;
+  margin-bottom: 30px;
+  position: absolute;
+  left: 90%;
+  top: 45px;
+  bottom: 20px;
+  font-size: 25px;
+}
+.icon_cart {
+  color: rgb(36, 36, 37);
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  padding: 2px 2px;
+  position: absolute;
+  bottom: 40px;
+}
+.cart p {
+  font-size: 19px;
+}
