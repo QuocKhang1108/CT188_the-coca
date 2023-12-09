@@ -38,16 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const email = emailInput.value;
       const password = passwordInput.value;
 
-      // Kiểm tra xem email đã được sử dụng chưa
+      
       if (!isEmailUsed(email)) {
-        // Nếu chưa, tạo một đối tượng người dùng và lưu vào localStorage
         const user = { email, password };
         saveUser(email, user);
-
-        // Hiển thị hộp thoại thông báo khi đăng kí thành công
         alert('Đăng kí thành công!');
       } else {
-        // Nếu email đã được sử dụng, hiển thị thông báo lỗi
         alert('Địa chỉ email đã được sử dụng!');
       }
     }
@@ -110,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function isValidEmail(email) {
-    // Sử dụng biểu thức chính quy để kiểm tra định dạng email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
@@ -159,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       formControl.classList.remove('error');
       formControl.classList.add('success');
-      errorElement.innerText = ''; // Xóa nội dung lỗi nếu giá trị hợp lệ
+      errorElement.innerText = ''; 
       return true;
     }
   }

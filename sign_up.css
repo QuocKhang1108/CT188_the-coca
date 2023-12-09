@@ -9,7 +9,7 @@ main * {
   box-sizing: border-box;
 }
 
-#form {
+form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -58,7 +58,7 @@ label {
   position: relative;
 }
 
-#form input {
+input {
   display: flex;
   align-items: center;
   width: 100%;
@@ -131,16 +131,17 @@ input:valid + span {
 /*     */
 
 .error label {
-  color: red;
+  color: red; 
 }
 
 .error input {
-  border: 2px solid red;
+  border: 2px solid red; 
 }
 
 .error .error-message {
-  display: block;
+  display: block; 
 }
+
 
 .success label {
   color: green;
@@ -151,5 +152,9 @@ input:valid + span {
 }
 
 .success .error-message {
-  display: none;
+  display: none; 
 }
+
+
+
+
