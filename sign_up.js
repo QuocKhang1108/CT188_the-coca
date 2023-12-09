@@ -19,7 +19,7 @@ togglePassword.addEventListener("click", () => {
 });
 
 togglePasswordConfirm.addEventListener("click", () => {
-  togglePasswordVisibility(passwordConfirm, togglePasswordConfirm);
+  togglePasswordVisibility(passwordConfirmInput, togglePasswordConfirm);
 });
 
 // xu li dang nhap
