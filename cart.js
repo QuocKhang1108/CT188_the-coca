@@ -44,6 +44,19 @@ function addcart(productImg, productName, productprice) {
   cartTable.append(addtr);
   cartTotal();
   deleteCart();
+
+  // Lưu thông tin giỏ hàng vào localStorage
+  var productData = {
+    img: productImg,
+    name: productName,
+    price: productprice
+  };
+  var cart = JSON.parse(localStorage.getItem('cart')) || [];
+  var existingProduct = cart.find(item => item.name === productName);
+  if (!existingProduct) {
+    cart.push(productData);
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
 }
 //----------------------Total--------------
 function cartTotal() {
@@ -81,6 +94,11 @@ function deleteCart() {
       deleteItem.remove();
       //console.log(deleteItem)
       cartTotal();
+      // Xóa sản phẩm khỏi localStorage
+      var productName = deleteItem.querySelector(".tittle").innerText;
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      var updatedCart = cart.filter(item => item.name !== productName);
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
     });
   }
 }
@@ -94,6 +112,30 @@ function inputchange() {
     });
   }
 }
+window.addEventListener('load', function() {
+  var cartData = JSON.parse(localStorage.getItem('cart'));
+  if (cartData) {
+    cartData.forEach(function(item) {
+      addcart(item.img, item.name, item.price);
+    });
+  }
+});
+window.addEventListener('beforeunload', function() {
+  var cartItem = document.querySelectorAll("tbody tr");
+  var cart = [];
+  for (var i = 0; i < cartItem.length; i++) {
+    var productName = cartItem[i].querySelector(".tittle").innerText;
+    var productPrice = cartItem[i].querySelector(".prices").innerText;
+    var productImg = cartItem[i].querySelector("img").src;
+
+    cart.push({
+      img: productImg,
+      name: productName,
+      price: productPrice
+    });
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+});
 
 const cartbtn = document.querySelector(".fa-times");
 const cartshow = document.querySelector(".fa-shopping-bag");
