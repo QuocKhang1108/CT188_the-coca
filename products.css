@@ -199,7 +199,9 @@
   padding-top: 30px;
 }
 .cart h2 {
-  margin-bottom: 20px;
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 35px;
 }
 
 .cart table {
@@ -252,9 +254,10 @@
   cursor: pointer;
   margin-bottom: 30px;
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left: 90%;
+  top: 45px;
   bottom: 20px;
+  font-size: 25px;
 }
 .icon_cart {
   color: rgb(36, 36, 37);
