@@ -349,7 +349,7 @@ for (let i = 0; i < products.length; i++) {
   const p = products[i];
   const productElemet = document.createElement("div");
   productElemet.className =
-    "product col-6 col-sm-4 col-md-3 col-lg-3 mb-4 pb-4 pt-4";
+    "product col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4 pb-4 pt-4";
   let html = `
       
         <div class="product__img">
