@@ -225,3 +225,86 @@ main {
     padding: 10px;
   }
 }
+
+/*------cart--------  */
+.cart {
+  width: 50%;
+  margin-top: auto;
+  text-align: center;
+  padding-top: 30px;
+}
+.cart h2 {
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+
+.cart table {
+  width: 100%;
+}
+
+.cart table thead tr th:first-child {
+  text-align: left;
+}
+.cart table tr td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.cart table thead tr th:last-child {
+  text-align: right;
+}
+.cart table tbody tr td:last-child {
+  text-align: right;
+}
+
+/* ------------*/
+.cart button {
+  position: relative;
+  overflow: hidden;
+  margin-top: 12px;
+  height: 30px;
+  padding: 0 20px;
+  border-radius: 30px;
+  background-size: 400%;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: tan;
+  font-weight: bold;
+  color: #fff;
+}
+.cart {
+  position: fixed;
+  height: 100vh;
+  width: 500px;
+  right: -100%;
+  top: 0;
+  background-color: rgb(36, 36, 37);
+  color: #fff;
+  padding: 12px 20px;
+  overflow-y: scroll;
+  transition: all 0.3s ease;
+}
+.cart i {
+  cursor: pointer;
+  margin-bottom: 30px;
+  position: absolute;
+  left: 90%;
+  top: 45px;
+  bottom: 20px;
+  font-size: 25px;
+}
+.icon_cart {
+  color: rgb(36, 36, 37);
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  padding: 2px 2px;
+  position: absolute;
+  bottom: 40px;
+}
+.cart p{
+  font-size: 19px;
+}
+
+
