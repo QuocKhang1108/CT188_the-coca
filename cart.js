@@ -151,7 +151,7 @@ console.log(clearbtn)
 
 clearbtn.onclick = function () {
   clearCartAndLocalStorage() 
-  alert("Thank you for your order")
+  alert("Thank you for paying your order")
 }
 function clearCartAndLocalStorage() {
   // Xóa tất cả các sản phẩm trong giỏ hàng
