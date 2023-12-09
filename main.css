@@ -202,3 +202,26 @@ main {
 .footer_items section {
   border-bottom: 2px inset white;
 }
+
+
+/* reponsive footer */
+
+/* CSS cho màn hình có kích thước nhỏ hơn hoặc bằng 768px */
+@media (max-width: 768px) {
+  .footer_items {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_items div {
+    margin-bottom: 20px;
+  }
+}
+
+/* CSS cho màn hình có kích thước lớn hơn hoặc bằng 1024px */
+@media (min-width: 1024px) {
+  .footer_items {
+    padding: 10px;
+  }
+}
