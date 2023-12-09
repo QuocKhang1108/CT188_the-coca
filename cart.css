@@ -1,0 +1,109 @@
+h1 {
+  font-family: "Courier New", Courier, monospace; /*kiểu chữ*/
+  color: #e82222;
+  font-weight: 800; /*độ đậm của chữ*/
+  padding: auto;
+}
+h1#icon_home {
+  background-color: #dddddd;
+  color: black;
+  font-size: 25px;
+  padding: 7px;
+}
+h1#icon_home img {
+  height: 20px;
+  width: 20px;
+}
+h1#vien1 {
+  padding-left: 10px;
+  border-left: 6px groove #728380;
+}
+th#vien2 {
+  text-align: left;
+  height: 30px;
+}
+td#can_phai {
+  text-align: right;
+  height: 30px;
+}
+td#can_trai {
+  text-align: left;
+  height: 30px;
+}
+
+h2 {
+  font-family: "Courier New", Courier, monospace; /*kiểu chữ*/
+  color: blueviolet;
+  font-weight: 1000; /*độ đậm của chữ*/
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 4px;
+  border-bottom: 2px inset #dddddd;
+  text-align: center;
+  font-size: 17px;
+}
+th {
+  border-bottom: 4px inset black;
+  color: black;
+  height: 40px;
+}
+input {
+  background-color: black;
+  color: white;
+  padding: 7px 100px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+input#note {
+  background-color: white;
+  width: 100%;
+  height: 40px;
+  padding: 0%;
+}
+
+#danhsachsp img {
+  height: 80px;
+  width: 60px;
+}
+
+/*chia cột*/
+.grid {
+  display: grid;
+  /* W(adjusted) = W(individual) - (1rem * 1/2) */
+  grid-template-columns: calc(50% - (30px * 1 / 2)) calc(50% - (30px * 1 / 2));
+  grid-column-gap: 20px;
+}
+.grid-col {
+  padding: 20px;
+}
+button {
+  background-color: #e82222;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+button#button_them {
+  background-color: #4192e2;
+}
+
+#danhsachsp .sanpham_i {
+  width: 30px;
+  background-color: #fff;
+  color: #4c4c4c;
+  outline: none;
+  padding: 5px;
+  text-align: center;
+}
+
+/* style="width: 30px;outline: none;" */

@@ -30,11 +30,11 @@ function login(e) {
   //   console.log(user);
   //   console.log(data);
   if (user == null) {
-    alert("Vui lòng nhập email và password!");
+    alert("Đăng nhập thất bại, email/password sai! Vui lòng nhập lại.");
   } else if (email == data.email && password == data.password) {
     alert("Đăng nhập thành công!");
     window.location.href = "home.html";
   } else {
-    alert("Đăng nhập thất bại, email hoặc password không trùng khớp!");
+    alert("Đăng nhập thất bại, email/password sai! Vui lòng nhập lại.");
   }
 }
