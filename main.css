@@ -271,16 +271,15 @@ main {
 .cart p {
   font-size: 19px;
 }
-#properti_cart{
+#properti_cart {
   outline: none;
   display: block;
   width: 50px;
   margin-left: 30px;
   padding: 10px;
-  padding-right: 2px; 
+  padding-right: 2px;
   outline: none;
   border: none;
   border-radius: 0;
   /* font-size: 20px; */
-  
 }
