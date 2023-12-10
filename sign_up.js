@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validateFirstName() {
     const firstNameValue = firstNameInput.value.trim();
-    const firstNameRegex = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    const firstNameRegex = /^[a-zA-Z]+$/;
 
     return validateInput(
       firstNameInput,
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validateLastName() {
     const lastNameValue = lastNameInput.value.trim();
-    const lastNameRegex = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    const lastNameRegex = /^[a-zA-Z]+$/;
 
     return validateInput(
       lastNameInput,
@@ -97,14 +97,17 @@ document.addEventListener("DOMContentLoaded", function () {
     if (emailValue === "") {
       return showError(emailInput, "Email is required!");
     } else if (!isValidEmail(emailValue)) {
-      return showError(emailInput, "Invalid email format!");
+      return showError(
+        emailInput,
+        'Email only contain letters (both uppercase and lowercase), numbers, dots, underscores, and hyphens! "example.1-1_1@email.com"'
+      );
     } else {
       return showSuccess(emailInput);
     }
   }
 
   function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
   }
 
@@ -115,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     return validateInput(
       passwordInput,
-      "Password is required and should be at least 8 characters",
+      "Password has at least 8 characters, contains at least one letter and one number",
       passwordRegex.test(passwordValue)
     );
   }
