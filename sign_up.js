@@ -19,7 +19,7 @@ togglePassword.addEventListener("click", () => {
 });
 
 togglePasswordConfirm.addEventListener("click", () => {
-  togglePasswordVisibility(passwordConfirm, togglePasswordConfirm);
+  togglePasswordVisibility(passwordConfirmInput, togglePasswordConfirm);
 });
 
 // xu li dang nhap
@@ -37,17 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const email = emailInput.value;
       const password = passwordInput.value;
 
-      // Kiểm tra xem email đã được sử dụng chưa
       if (!isEmailUsed(email)) {
-        // Nếu chưa, tạo một đối tượng người dùng và lưu vào localStorage
         const user = { email, password };
         saveUser(email, user);
-
-        // Hiển thị hộp thoại thông báo khi đăng kí thành công
         alert("Đăng kí thành công!");
         window.location.href = "log_in.html";
       } else {
-        // Nếu email đã được sử dụng, hiển thị thông báo lỗi
         alert("Địa chỉ email đã được sử dụng!");
       }
     }
@@ -81,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     return validateInput(
       firstNameInput,
-      "First Name not valid",
+      "First Name is required",
       firstNameRegex.test(firstNameValue)
     );
   }
@@ -92,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     return validateInput(
       lastNameInput,
-      "Last Name not valid",
+      "Last Name is required",
       lastNameRegex.test(lastNameValue)
     );
   }
@@ -100,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function validateEmail() {
     const emailValue = emailInput.value.trim();
     if (emailValue === "") {
-      return showError(emailInput, "Email cannot be blank!");
+      return showError(emailInput, "Email is required!");
     } else if (!isValidEmail(emailValue)) {
       return showError(emailInput, "Invalid email format!");
     } else {
@@ -109,7 +104,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function isValidEmail(email) {
-    // Sử dụng biểu thức chính quy để kiểm tra định dạng email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
@@ -152,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       formControl.classList.remove("error");
       formControl.classList.add("success");
-      errorElement.innerText = ""; // Xóa nội dung lỗi nếu giá trị hợp lệ
+      errorElement.innerText = "";
       return true;
     }
   }
