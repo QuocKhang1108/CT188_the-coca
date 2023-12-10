@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validateFirstName() {
     const firstNameValue = firstNameInput.value.trim();
-    const firstNameRegex = /^[a-zA-Z]+$/;
+    const firstNameRegex = /^[a-zA-Z]+ [a-zA-Z]+$/;
 
     return validateInput(
       firstNameInput,
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validateLastName() {
     const lastNameValue = lastNameInput.value.trim();
-    const lastNameRegex = /^[a-zA-Z]+$/;
+    const lastNameRegex = /^[a-zA-Z]+ [a-zA-Z]+$/;
 
     return validateInput(
       lastNameInput,
