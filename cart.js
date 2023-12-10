@@ -37,7 +37,7 @@ function addcart(productImg, productName, productprice) {
     productName +
     '</span></td><td><p><span class="prices">' +
     productprice +
-    '</span><sup>đ</sup></p></td><td><input type="number" style="width: 30px;outline: none;" value="1" min="1" ></td><td style="cursor: pointer;"><span class="deleteCart">Remove</span></td></tr>';
+    '</span><sup>đ</sup></p></td><td><input id="properti_cart" type="number" style="width: 30px;outline: none;" value="1" min="1" ></td><td style="cursor: pointer;"><span class="deleteCart">Remove</span></td></tr>';
   addtr.innerHTML = trcontent;
   var cartTable = document.querySelector("tbody");
   // console.log(cartTable )
